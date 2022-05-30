@@ -4,17 +4,25 @@ import styles from "./Navbar.module.css";
 import logo from "../../Images/costs_logo.png";
 function Navbar() {
   return (
-    <nav>
+    <nav className={styles.navbar}>
       <Container>
-        <img src={logo} alt="Falcon-Manager" />
-        <Link to="/">Home</Link>
-        <br></br>
-        <Link to="/contact">Contact</Link>
-        <br></br>
-        <Link to="/company">Company</Link>
-        <br></br>
-        <Link to="/newproject">NewProject</Link>
-        <br></br>
+        <Link to="/">
+          <img src={logo} alt="Falcon-Manager" />
+        </Link>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={styles.item}>
+            <Link to="/projects">Projetos</Link>
+          </li>
+          <li className={styles.item}>
+            <Link to="/company">Empresa</Link>
+          </li>
+          <li className={styles.item}>
+            <Link to="/contact">Contato</Link>
+          </li>
+        </ul>
       </Container>
     </nav>
   );
